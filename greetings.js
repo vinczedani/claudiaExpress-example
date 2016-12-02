@@ -11,6 +11,8 @@ function sendGreeting() {
 
 router.get('/hu', (req, res, next) => {
   req.myGreeting = 'Szia!';
+  res.status(201);
+  res.headers.TestHeader = 'Hello Headers';
   next();
 }, sendGreeting());
 
